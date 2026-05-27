@@ -46,7 +46,7 @@ const CVPreview = () => {
 return (
     <div className={styles.pageContainer}>
         <div className={`${styles.toolbar} ${styles.noPrint}`}>
-            <button onClick={() => navigate(-1)} className={styles.backBtn}>Zpět</button>
+            <button onClick={() => navigate(-1)} className={styles.cancelBtn}>Zpět</button>
             <button onClick={() => window.print()} className={styles.printBtn}>Uložit jako PDF</button>
         </div>
 
