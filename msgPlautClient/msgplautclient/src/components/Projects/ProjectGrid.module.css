@@ -1,0 +1,53 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.statusBadge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e3f2fd;
+    color: #007bff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    font-size: 0.85rem;
+    color: #888;
+}

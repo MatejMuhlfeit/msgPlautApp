@@ -1,0 +1,127 @@
+/* Kontejner pro vycentrování na střed stránky */
+.registerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 20px;
+}
+
+/* Hlavní karta formuláře */
+.registerForm {
+    width: 100%;
+    max-width: 650px; /* O něco širší než Login kvůli dvěma sloupcům */
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e4e8;
+}
+
+.registerForm h2 {
+    color: #004a99; /* msgPlaut modrá */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Grid layout pro pole */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dva sloupce */
+    gap: 1.2rem;
+}
+
+/* Stylování vstupních polí a selectu */
+.registerForm input,
+.registerForm select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.registerForm input:focus,
+.registerForm select:focus {
+    outline: none;
+    border-color: #004a99;
+    box-shadow: 0 0 0 3px rgba(0, 74, 153, 0.1);
+}
+
+/* Skupina pro rok narození (popisek + select) */
+.selectGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.selectGroup label {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+
+
+.submitBtn {
+    grid-column: span 2;
+    margin-top: 1rem;
+    padding: 0.9rem;
+    background-color: #004a99;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+    background-color: #003366;
+}
+
+
+.footer {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.footer a {
+    color: #004a99;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responzivita - na mobilu jeden sloupec */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .submitBtn, .footer {
+        grid-column: span 1;
+    }
+}
+
+.errorBanner {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #fecaca;
+}

@@ -1,0 +1,223 @@
+.sectionCard {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e4e8;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f8f9fa;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+}
+
+.header h3 {
+    margin: 0;
+    color: #004a99;
+    font-size: 1.4rem;
+}
+
+/* Zobrazení dat */
+.infoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.infoItem {
+    font-size: 1rem;
+    color: #444;
+}
+
+.infoItem strong {
+    color: #666;
+    margin-right: 8px;
+}
+
+/* Formulář v editaci */
+.gridForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.fullWidth {
+    grid-column: span 2;
+}
+
+.gridForm input, .gridForm select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Tlačítka */
+.editBtn, .saveBtn, .cancelBtn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    transition: 0.2s;
+}
+
+.editBtn {
+    background: #f0f4f8;
+    color: #004a99;
+}
+
+.editBtn:hover {
+    background: #e1e9f0;
+}
+
+.saveBtn {
+    background: #004a99;
+    color: white;
+}
+
+.cancelBtn {
+    background: #eee;
+    color: #666;
+    margin-left: 10px;
+}
+
+.formActions {
+    grid-column: span 2;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .infoGrid, .gridForm {
+        grid-template-columns: 1fr;
+    }
+    .fullWidth, .formActions {
+        grid-column: span 1;
+    }
+}
+
+/* Kontejner pro formulář praxe a vzdělání (aby byl vizuálně odlišen při přidávání/editaci) */
+.gridForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    background: #fcfcfc;
+    padding: 1.5rem;
+    border: 1px solid #eef0f2;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Úprava pro textovou oblast (popis činností) */
+.gridForm textarea {
+    grid-column: span 2; /* Přes oba sloupce */
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical; /* Povolí měnit výšku, ale ne šířku */
+    min-height: 80px;
+}
+
+/* Styl pro kontejner s checkboxem */
+.checkboxContainer {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.checkboxContainer input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkboxContainer label {
+    font-weight: 500;
+    color: #444;
+    cursor: pointer;
+}
+
+/* Styl pro zobrazení dat v seznamu (náhled praxe) */
+.item {
+    padding: 1.2rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: background 0.2s;
+}
+
+.item:hover {
+    background: #f9fbff;
+}
+
+.itemContent {
+    flex: 1;
+}
+
+.itemContent strong {
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.itemDates {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 4px 0;
+    font-weight: 600;
+}
+
+.description {
+    color: #555;
+    font-size: 0.95rem;
+    margin-top: 8px;
+    white-space: pre-wrap; /* Zachová zalomení řádků z textarea */
+}
+
+/* Tlačítka akcí u položky (Edit/Smazat) */
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.editIconBtn, .deleteIconBtn {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.editIconBtn {
+    color: #004a99;
+    border: 1px solid #004a99;
+}
+
+.editIconBtn:hover {
+    background: #004a99;
+    color: white;
+}
+
+.deleteIconBtn {
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.deleteIconBtn:hover {
+    background: #dc3545;
+    color: white;
+}
+
+

@@ -1,0 +1,44 @@
+.pageContainer {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Dá název vlevo a tlačítko vpravo */
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.createBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.createBtn:hover {
+    background-color: #0056b3;
+}
+
+.placeholder {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+    background-color: #fafafa;
+    border: 2px dashed #eee;
+    border-radius: 10px;
+}

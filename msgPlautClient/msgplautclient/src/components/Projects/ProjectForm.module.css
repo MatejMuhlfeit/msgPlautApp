@@ -1,0 +1,143 @@
+.container {
+    padding: 20px;
+    max-width: 900px; /* O něco užší než seznam pro lepší čitelnost formuláře */
+    margin: 0 auto;
+}
+
+.container h2 {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Mřížka pro základní inputy */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dva sloupce */
+    gap: 15px;
+}
+
+.form input, 
+.form select, 
+.form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form input:focus, 
+.form select:focus, 
+.form textarea:focus {
+    border-color: #007bff;
+}
+
+.form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Sekce pro zaměstnance */
+.employeeSection {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.employeeSection h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.employeeRow {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.employeeRow select {
+    flex: 1; /* Select zabere maximum místa */
+}
+
+/* Tlačítko pro smazání řádku (X) */
+.removeBtn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Tlačítko pro přidání (+) */
+.addBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    transition: opacity 0.2s;
+}
+
+.addBtn:hover {
+    opacity: 0.9;
+}
+
+/* Spodní akce (Zrušit / Vytvořit) */
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    border-top: 2px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+.cancelBtn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Responzivita - na mobilu bude jen jeden sloupec */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

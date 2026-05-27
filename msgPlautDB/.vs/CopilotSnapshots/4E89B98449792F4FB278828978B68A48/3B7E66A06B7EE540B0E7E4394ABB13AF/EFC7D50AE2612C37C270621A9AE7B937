@@ -1,0 +1,101 @@
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using msgPlautDB.Models;
+using msgPlautDB.DTOs;
+
+
+namespace msgPlautDB.Services
+{
+    public class AuthService : IAuthService
+    {
+        private readonly UserManager<Employee> _userManager;
+        private readonly SignInManager<Employee> _signInManager;
+        private readonly IConfiguration _configuration;
+
+        public AuthService(
+            UserManager<Employee> userManager,
+            SignInManager<Employee> signInManager,
+            IConfiguration configuration)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _configuration = configuration;
+        }
+
+        public async Task<(bool Succeeded, string[] Errors, string Token, Employee? User)> RegisterAsync(RegisterDTO registerDTO)
+        {
+            var user = new Employee
+            {
+                UserName = registerDTO.Email,
+                Email = registerDTO.Email,
+                Name = registerDTO.Name,
+                Surname = registerDTO.Surname,
+                Position = registerDTO.Position,
+                EmploymentType = registerDTO.EmploymentType,
+                City = registerDTO.City,
+                Country = registerDTO.Country,
+                BirthYear = registerDTO.BirthYear,
+                Expertise = registerDTO.Expertise,
+                ExpertiseArea = registerDTO.ExpertiseArea
+            };
+
+            var result = await _userManager.CreateAsync(user, registerDTO.Password);
+
+            if (!result.Succeeded)
+            {
+                return (false, result.Errors.Select(e => e.Description).ToArray(), null!, null);
+            }
+
+            var token = GenerateJwtToken(user);
+            return (true, Array.Empty<string>(), token, user);
+
+        }
+
+        public async Task<(bool Succeeded, string[] Errors, string Token, Employee? User)> LoginAsync(LoginDTO loginDTO)
+        {
+            var user = await _userManager.FindByEmailAsync(loginDTO.Email);
+            if (user == null)
+            {
+                return (false, new[] { "Neplatný Email nebo heslo." }, null!, null);
+            }
+
+            var result = await _signInManager.CheckPasswordSignInAsync(user, loginDTO.Password, false);
+            if (!result.Succeeded)
+            {
+                return (false, new[] { "Neplatný Email nebo heslo." }, null!, null);
+            }
+
+            var token = GenerateJwtToken(user);
+            return (true, Array.Empty<string>(), token, user);
+        }
+
+
+        private string GenerateJwtToken(Employee user)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_configuration["JwtSettings:SecretKey"] ?? "DostatecneDlouhyKlicProProdukciVedeneProFirmuMsgPlaut");
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+                {
+                            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                            new Claim(ClaimTypes.Email, user.Email!),
+                            new Claim(ClaimTypes.Name, $"{user.Name} {user.Surname}")
+                }),
+                Expires = DateTime.UtcNow.AddDays(7),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                Issuer = _configuration["JwtSettings:Issuer"],
+                Audience = _configuration["JwtSettings:Audience"]
+            };
+
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token); 
+
+        }
+    }
+}

@@ -1,0 +1,25 @@
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using msgPlautDB.Models;
+
+namespace msgPlautDB.Data
+
+{
+    public class ApplicationDbContext: IdentityDbContext<Employee, IdentityRole<Guid>, Guid>
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+        }
+        public DbSet<Models.Employee> Employees { get; set; }
+        public DbSet<Models.Project> Projects { get; set; }
+        public DbSet<Models.ProjectAssignment> ProjectAssignments { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+           builder.Entity<Employee>()
+                .HasIndex(e => e.Email)
+                .IsUnique();
+        }
+    }
+}
