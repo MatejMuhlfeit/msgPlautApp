@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|c:\\users\\futur\\personal\\msgplautapp\\msgplautdb\\msgplautdb\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|solutionrelative:msgplautdb\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|c:\\users\\futur\\personal\\msgplautapp\\msgplautdb\\msgplautdb\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|solutionrelative:msgplautdb\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|c:\\users\\futur\\personal\\msgplautapp\\msgplautdb\\msgplautdb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|solutionrelative:msgplautdb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|c:\\users\\futur\\personal\\msgplautapp\\msgplautdb\\msgplautdb\\services\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|solutionrelative:msgplautdb\\services\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|c:\\users\\futur\\personal\\msgplautapp\\msgplautdb\\msgplautdb\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|solutionrelative:msgplautdb\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A45BBDF3-E4CD-ED5E-F757-9AAA730EFD55}|msgPlautDB\\msgPlautDB.csproj|c:\\users\\futur\\personal\\msgplautapp\\msgplautdb\\msgplautdb\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,7 +39,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,20 +51,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "msgPlautDB\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\Properties\\launchSettings.json",
+              "RelativeToolTip": "msgPlautDB\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-27T07:03:14.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\Program.cs",
               "RelativeDocumentMoniker": "msgPlautDB\\Program.cs",
               "ToolTip": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\Program.cs",
               "RelativeToolTip": "msgPlautDB\\Program.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAHsAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-15T16:59:53.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DbInitializer.cs",
               "DocumentMoniker": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\Services\\DbInitializer.cs",
               "RelativeDocumentMoniker": "msgPlautDB\\Services\\DbInitializer.cs",
@@ -72,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProfileController.cs",
               "DocumentMoniker": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "msgPlautDB\\Controllers\\ProfileController.cs",
@@ -84,19 +101,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ProjectController.cs",
               "DocumentMoniker": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\Controllers\\ProjectController.cs",
               "RelativeDocumentMoniker": "msgPlautDB\\Controllers\\ProjectController.cs",
               "ToolTip": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\Controllers\\ProjectController.cs",
               "RelativeToolTip": "msgPlautDB\\Controllers\\ProjectController.cs",
-              "ViewState": "AgIAANwAAAAAAAAAAAAYwP4AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAANoAAAAAAAAAAAArwAABAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T19:11:23.885Z"
+              "WhenOpened": "2026-05-13T19:11:23.885Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "okiz2yyq..sql",
               "DocumentMoniker": "C:\\Users\\futur\\AppData\\Local\\Temp\\okiz2yyq..sql",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\okiz2yyq..sql",
@@ -107,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "dbo.WorkExperiences.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/msgPlautDB/True/SqlTable/dbo.WorkExperiences.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/msgPlautDB/True/SqlTable/dbo.WorkExperiences.sql",
@@ -116,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "dbo.ProjectAssignments.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/msgPlautDB/True/SqlTable/dbo.ProjectAssignments.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/msgPlautDB/True/SqlTable/dbo.ProjectAssignments.sql",

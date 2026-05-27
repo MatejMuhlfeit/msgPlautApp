@@ -1,0 +1,176 @@
+/* === STYLY PRO OBRAZOVKU I TISK === */
+.pageContainer {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Simulace A4 na obrazovce */
+.a4Sheet {
+  width: 210mm;
+  min-height: 297mm; 
+  margin: 0 auto;
+  background: #ffffff;
+  /* Sjednotíme padding pro obrazovku i tisk na 20mm, aby byl náhled 1:1 */
+  padding: 2mm; 
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.photoBox img {
+  width: 100%;
+  height: auto;
+  border: 1.5mm solid white;
+}
+
+.surname {
+  font-size: 40pt;
+}
+
+.cvLayout {
+  display: flex;
+  min-height: 267mm; /* Zajistí, že obsah bude mít dostatek prostoru i pro delší CV */
+  gap: 10mm;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #991341;
+  padding: 5mm; /* Trochu zvětšen padding pro lepší čitelnost v 20mm listu */
+  color: white;
+}
+
+.sidebarSection ul li {
+  list-style: none;
+}
+
+.sidebarSection {
+  margin-bottom: 2mm;
+}
+
+.personalData {
+  margin-bottom: 2mm;
+}
+
+.mainContent {
+  width: 70%;
+}
+
+/* Fixní struktura projektů */
+.projectsPage {
+  /* NA OBRAZOVCE: Nasimulujeme odskočení na novou stránku pomocí marginu */
+  margin-top: 40mm; 
+  border-top: 1px dashed #ccc; /* Volitelné: vizuální čára konce stránky na webu */
+  padding-top: 10px;
+  
+  /* PRO TISK: Vynucení reálné nové stránky v PDF */
+  break-before: page;
+  page-break-before: always;
+}
+
+.experienceRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  /* Zabrání rozseknutí jednoho projektu napůl mezi stranami v PDF */
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.experienceDetail {
+  flex-grow: 1;
+}
+
+.footer {
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  font-size: 9pt;
+  text-align: center;
+}
+
+.logoContainer {
+  text-align: right;
+  margin-bottom: 2mm;
+  font-size: 0; 
+}
+.logoContainer img {
+  width: 60mm;
+  height: auto;
+  margin-top: 2mm;
+}
+
+.project {
+  display: flex;
+  gap: 10mm;
+  margin-bottom: 20mm;
+}
+
+.project h3 {
+  width: 30%;
+  background-color: #991341;
+  color: white;
+}
+
+.project ul {
+  width: 70%;
+}
+
+
+/* === TISKOVÉ CSS (@media print) === */
+@media print {
+  /* CRITICAL: Vynulování okrajů samotného prohlížeče, aby PDF nebylo posunuté */
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0 !important; /* Odstraní tiskové záhlaví/zásuvky a vycentruje obsah */
+  }
+
+  .noPrint {
+    display: none !important;
+  }
+
+  .pageContainer {
+    background-color: transparent;
+    padding-top: 0;
+  }
+
+  .a4Sheet {
+    width: 210mm;
+    min-height: 297mm;
+    box-shadow: none;
+    margin: 0 !important;
+    padding: 2mm; /* Tento padding nyní přesně odpovídá tomu na obrazovce */
+    position: absolute;
+    top: 0; 
+    left: 0;
+    
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .projectsPage {
+    /* PRO TISK: Vynulujeme ten obří margin, který simuloval novou stránku na webu, 
+       protože tiskový engine zde aplikuje skutečné zalomení stránky */
+    margin-top: 0; 
+    border-top: none;
+  }
+
+  .footer {
+    break-inside: avoid;
+  }
+}

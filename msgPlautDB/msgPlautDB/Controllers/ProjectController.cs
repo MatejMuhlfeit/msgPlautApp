@@ -253,6 +253,11 @@ namespace msgPlautDB.Controllers
                     ProjectName = pa.Project.Name,
                     Customer = pa.Project.Customer,
                     Description = pa.Project.Description,
+                    Branch = pa.Project.Branch,
+                    Location = pa.Project.Location,
+                    Language = pa.Project.Language,
+                    StartTime = pa.Project.StartTime,
+                    EndTime = pa.Project.EndTime,
                     Activities = pa.ActivityAssignments.Select(aa => aa.Activity.ActivityName).ToList()
                 })
                 .ToListAsync();

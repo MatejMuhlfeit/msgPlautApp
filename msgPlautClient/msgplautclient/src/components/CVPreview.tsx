@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import api from "../api/axiosInstance";
 import styles from "./CVPreview.module.css";
+import msgPlautLogo from "../imgs/msgPlautLogo.png";
+import portrait from "../imgs/portrait.jpg";
 
 const CVPreview = () => {
     const location = useLocation();
@@ -52,12 +54,14 @@ return (
 
         <div className={styles.a4Sheet}>
             <div className={styles.logoContainer}>
-                <img src="/msg-logo.png" alt="msg Plaut" className={styles.logo} />
+                <img src={msgPlautLogo} alt="msg Plaut" className={styles.logo} />
             </div>
 
             <div className={styles.cvLayout}>
                 <aside className={styles.sidebar}>
-                    <div className={styles.photoBox}></div>
+                    <div className={styles.photoBox}>
+                        <img src={portrait} alt="Profilový obrázek" className={styles.photo} />
+                    </div>
                     <div className={styles.personalData}>
                         <p>Rok Narození: <span>{data.profile.birthYear}</span></p>
                         <p>Národnost: <span>{data.profile.nationality || "Česká"}</span></p>
@@ -72,12 +76,27 @@ return (
                             ))}
                         </ul>
                     </div>
+                    <div className={styles.sidebarSection}>
+                        <h4>Odbornost:</h4>
+                        <ul>
+                            {data.profile.expertises?.map((exp: any) => (
+                                <li key={exp.id}>
+                                    <p>{exp.expertiseName} ({exp.employeeExpertiseArea?.expertiseAreaName})</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className={styles.sidebarSection}>
+                        <h4>Pozice:</h4>
+                        <p>{data.profile.position}</p>
+                    </div>
                 </aside>
 
                 <main className={styles.mainContent}>
                     <h1 className={styles.nameHeader}>
                         {data.profile.name.toUpperCase()}<br />
-                        {data.profile.surname.toUpperCase()}
+                        <span className={styles.surname}>{data.profile.surname.toUpperCase()}</span>
+                        
                     </h1>
 
                     <section className={styles.mainSection}>
@@ -114,25 +133,25 @@ return (
                             </div>
                         ))}
                     </section>
-                    <section className={styles.projectsPage}>
+                </main>
+                
+            </div>
+             <section className={styles.projectsPage}>
                         <h2>Projekty</h2>
                         {data.projects.map((proj: any) => (
-                            <div key={proj.projectId} className={styles.experienceRow}>
-                                <div className={styles.experienceYears}>Projekt</div>
-                                <div className={styles.experienceDetail}>
-                                    <div className={styles.companyName}>{proj.projectName}</div>
-                                    <div className={styles.customerName}>{proj.customer}</div>
-                                    <ul className={styles.activityList}>
-                                        {proj.activities.map((act: string, i: number) => (
-                                            <li key={i}>{act}</li>
-                                        ))}
-                                    </ul>
-                                </div>
+                            <div key={proj.projectId} className={styles.project}>
+                                <h3>{proj.projectName}</h3>
+                                <ul>
+                                    <li><strong>Zákazník:</strong> {proj.customer}</li>
+                                    <li><strong>Oblast:</strong> {proj.branch}</li>
+                                    <li><strong>Lokalita:</strong> {proj.location}</li>
+                                    <li><strong>Jazyk:</strong> {proj.language}</li>
+                                    <li><strong>Od:</strong> {proj.startTime} <strong>Do:</strong> {proj.endTime || "Dosud"}</li>
+                                </ul> 
                             </div>
                         ))}
-                    </section>
-                </main>
-            </div>
+                        
+                </section>
             <footer className={styles.footer}>
                 <p>msg Plaut CZ s.r.o | Klimentstká 1216/46 | 110 00 Praha</p>
                 <a href="https://www.msg-plaut.com/cs/">https://www.msg-plaut.com/cs/</a>

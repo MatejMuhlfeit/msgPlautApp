@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("msgPlautDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e06564ed07c83bd60e64f7f8ca0ed5d9400df25e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9a7d29160d4b955803b90e9047c5685738f4cbd")]
 [assembly: System.Reflection.AssemblyProductAttribute("msgPlautDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("msgPlautDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
