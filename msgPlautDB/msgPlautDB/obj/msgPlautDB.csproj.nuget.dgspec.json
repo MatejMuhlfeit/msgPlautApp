@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\futur\\source\\repos\\RP2025-26_Muhlfeit-Matej_Prumyslova-webova-aplikace-pro-spravu-projektu-a-CV\\msgPlautDB\\msgPlautDB\\msgPlautDB.csproj": {}
+    "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\msgPlautDB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\futur\\source\\repos\\RP2025-26_Muhlfeit-Matej_Prumyslova-webova-aplikace-pro-spravu-projektu-a-CV\\msgPlautDB\\msgPlautDB\\msgPlautDB.csproj": {
+    "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\msgPlautDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\futur\\source\\repos\\RP2025-26_Muhlfeit-Matej_Prumyslova-webova-aplikace-pro-spravu-projektu-a-CV\\msgPlautDB\\msgPlautDB\\msgPlautDB.csproj",
+        "projectUniqueName": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\msgPlautDB.csproj",
         "projectName": "msgPlautDB",
-        "projectPath": "C:\\Users\\futur\\source\\repos\\RP2025-26_Muhlfeit-Matej_Prumyslova-webova-aplikace-pro-spravu-projektu-a-CV\\msgPlautDB\\msgPlautDB\\msgPlautDB.csproj",
+        "projectPath": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\msgPlautDB.csproj",
         "packagesPath": "C:\\Users\\futur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\futur\\source\\repos\\RP2025-26_Muhlfeit-Matej_Prumyslova-webova-aplikace-pro-spravu-projektu-a-CV\\msgPlautDB\\msgPlautDB\\obj\\",
+        "outputPath": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

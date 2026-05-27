@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wVxgZZGtALw=",
+  "dgSpecHash": "PF5r/oDhBjo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\futur\\source\\repos\\RP2025-26_Muhlfeit-Matej_Prumyslova-webova-aplikace-pro-spravu-projektu-a-CV\\msgPlautDB\\msgPlautDB\\msgPlautDB.csproj",
+  "projectFilePath": "C:\\Users\\futur\\Personal\\msgPlautApp\\msgPlautDB\\msgPlautDB\\msgPlautDB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\futur\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\futur\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

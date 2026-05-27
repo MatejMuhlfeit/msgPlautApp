@@ -77,7 +77,7 @@ const ProjectForm: React.FC = () => {
                     <input name="name" placeholder="Název projektu" onChange={handleInputChange} required/>
                     <input name="uniqueKey" placeholder="Zakázka (např: CZ1114-35)" onChange={handleInputChange} required/>
                     <input name="customer" placeholder="Zákazník" onChange={handleInputChange} required/>
-                    <input name="location" placeholder="Lokatika" onChange={handleInputChange} required/>
+                    <input name="location" placeholder="Lokalita" onChange={handleInputChange} required/>
                     <input name="branch" placeholder="Oblast Průmyslu (např. Automotive)" onChange={handleInputChange} required />
                     <input name="language" placeholder="Jazyk" onChange={handleInputChange} required/>
                     <input name="startTime" placeholder="Začátek (MM/RRRR)" onChange={handleInputChange} required />
