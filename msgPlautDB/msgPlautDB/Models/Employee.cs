@@ -14,6 +14,10 @@ namespace msgPlautDB.Models
         public required int BirthYear { get; set; }
         public required string Role { get; set; } = "User";
 
+        // Spojení na mapovací tabulku
+        public virtual EmployeeMapping? Mapping { get; set; }
+
+        // Tvoje stávající kolekce zůstávají beze změny spojené přes Guid
         public virtual ICollection<EmployeeExpertise> Expertises { get; set; } = new List<EmployeeExpertise>();
         public virtual ICollection<WorkExperience> WorkExperiences { get; set; } = new List<WorkExperience>();
         public virtual ICollection<EmployeeEducation> Educations { get; set; } = new List<EmployeeEducation>();

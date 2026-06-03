@@ -10,6 +10,10 @@ const Topbar = () => {
         navigate("/login");
     };
 
+    if (!token) {
+        return null;
+    }
+
     return (
         <nav className={styles.topbar}>
             <div className={styles.logo} onClick={() => navigate('/')}>
