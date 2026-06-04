@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("msgPlautDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+208997d2085da7f52b5a88d8f70c8b4878cd959d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b90fc9e3f054029b9e1b637d21aa7192ff552f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("msgPlautDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("msgPlautDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -43,8 +43,9 @@ namespace msgPlautDB.Data
                 entity.Property(e => e.Surname).HasColumnName("lastname");
                 entity.Property(e => e.Username).HasColumnName("username");
                 entity.Property(e => e.City).HasColumnName("city");
-                entity.Property(e => e.Email).HasColumnName("email"); // pokud tam je sloupec email
+                entity.Property(e => e.CostCenter).HasColumnName("cost_center");
             });
+
 
             // 2. MAPOVACÍ TABULKA (Tato se v DB normálně vytvoří)
             builder.Entity<EmployeeMapping>(entity =>

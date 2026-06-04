@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Systen.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
 namespace msgPlautDB.Models
 {
     public class Employee : IdentityUser<Guid>
     {
-        [NotMapped] // Řekne EF Core, aby pro toto nevytvářel sloupec v tabulce Employees
+        [NotMapped]
         public string Name 
         {
             get => Mapping?.EmployeeImport?.Name ?? string.Empty;
@@ -51,7 +51,7 @@ namespace msgPlautDB.Models
             }
         }
     
-        public override string Email => Mapping?.EmployeeImport?.Email ?? string.Empty;
+        public override string Email => Mapping?.EmployeeImport?.Username ?? string.Empty;
         public required string Position { get; set; }
         public required string EmploymentType { get; set; }
         public required string Country { get; set; }

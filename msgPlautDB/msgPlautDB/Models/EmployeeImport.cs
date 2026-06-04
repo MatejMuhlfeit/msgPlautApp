@@ -8,7 +8,7 @@ namespace msgPlautDB.Models
         public string Name { get; set; } = null!; // firstname
         public string Surname { get; set; } = null!; // lastname
         public string? City { get; set; }
-        public string? Email { get; set; }
+        public string? Username { get; set; }
         public string CostCenter { get; set; } = null!;
 
         // Spojení na mapovací tabulku
