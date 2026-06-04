@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import api from "../api/axiosInstance";
 import styles from "./CVPreview.module.css";
-import msgPlautLogo from "../imgs/msgPlautLogo.png";
-import portrait from "../imgs/portrait.jpg";
+// import msgPlautLogo from "../imgs/msgPlautLogo.png";
+// import portrait from "../imgs/portrait.jpg";
 
 const CVPreview = () => {
     const location = useLocation();
@@ -54,13 +54,13 @@ return (
 
         <div className={styles.a4Sheet}>
             <div className={styles.logoContainer}>
-                <img src={msgPlautLogo} alt="msg Plaut" className={styles.logo} />
+                {/* <img src={msgPlautLogo} alt="msg Plaut" className={styles.logo} /> */}
             </div>
 
             <div className={styles.cvLayout}>
                 <aside className={styles.sidebar}>
                     <div className={styles.photoBox}>
-                        <img src={portrait} alt="Profilový obrázek" className={styles.photo} />
+                        {/* <img src={portrait} alt="Profilový obrázek" className={styles.photo} /> */}
                     </div>
                     <div className={styles.personalData}>
                         <p>Rok Narození: <span>{data.profile.birthYear}</span></p>

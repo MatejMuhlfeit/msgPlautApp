@@ -7,9 +7,9 @@ namespace msgPlautDB.Models
         public int Id { get; set; } // odpovídá 'id' (int) v phpMyAdminu
         public string Name { get; set; } = null!; // firstname
         public string Surname { get; set; } = null!; // lastname
-        public string Username { get; set; } = null!;
         public string? City { get; set; }
         public string? Email { get; set; }
+        public string CostCenter { get; set; } = null!;
 
         // Spojení na mapovací tabulku
         public virtual EmployeeMapping? Mapping { get; set; }

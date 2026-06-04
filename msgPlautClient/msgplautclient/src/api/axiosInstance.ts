@@ -1,13 +1,13 @@
 // axiosConfig.ts
 import axios from 'axios';
 
-const api = axios.create({
-    baseURL: 'https://localhost:7016/api'
-});
-
 // const api = axios.create({
-//     baseURL: "http://100.67.99.51:5000"
+//     baseURL: 'https://localhost:7016/api'
 // });
+
+const api = axios.create({
+    baseURL: "http://100.67.99.51:5000/api"
+});
 //Zakomentovaný kód pro rychlé přepnutí pro vzdálený přístup. Používá se ve chvíli, kdy backend běží na jiném stroji v jiné síti než Frontend. Pro tento účel byl využit Tailscale.
 
 api.interceptors.request.use((config) => {
